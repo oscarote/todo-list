@@ -1,0 +1,29 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "A todo list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscarote/todo-list.git"
+  },
+  "keywords": [
+    "todo",
+    "todo-list"
+  ],
+  "author": "Oscarote",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oscarote/todo-list/issues"
+  },
+  "homepage": "https://github.com/oscarote/todo-list#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.2",
+    "mini-css-extract-plugin": "^2.6.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
