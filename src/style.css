@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    --headerBg: #0369a1;
+    --headerColor: white;
+    --sidebarBg: #e0f2fe;
+    --contentBg: #f0f9ff;
+    --footerBg: #0369a1;
+    --textShadow: rgba(0, 0, 0, 0.16) 8px 10px 5px;
+    --buttonBg: #2be24cb3;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template: auto 1fr auto / 1fr;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    background-color: var(--headerBg);
+}
+
+header h1 {
+    color: var(--headerColor);
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-shadow: var(--textShadow);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+header .material-symbols-outlined {
+    color: var(--headerColor);
+    font-weight: 600;
+    font-size: 4rem;
+    margin-left: 1rem;
+    margin-right: 0.8rem;
+}
+
+/* Buttons */
+button {
+    font-size: 1.5rem;
+    border: none;
+    transition: filter 0.15s ease-in-out;
+    outline: none;
+    background-color: inherit;
+}
+
+.addProject {
+    display: flex;
+    align-items: center;
+}
+
+button:hover {
+    filter: brightness(90%);
+    transform: scale(1.1);
+}
+button:active {
+    transform: scale(1.2);
+}
+
+/* Main */
+main {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.sidebar {
+    background-color: var(--sidebarBg);
+    padding: 1rem;
+}
+
+.content {
+    background-color: var(--contentBg);
+    padding: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--footerBg);
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+#gh-logo {
+    width: 35px;
+    height: 35px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-left: 5px;
+}
