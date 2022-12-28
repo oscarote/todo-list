@@ -1,27 +1,18 @@
 export default class Task {
-    constructor(title, dueDate = "No date", description, priority, notes, checklist) {
+    constructor(title, dueDate = "", description = "", priority = "Low", notes = "", status = "notDone") {
         this.title = title;
-        this.description = description;
         this.dueDate = dueDate;
+        this.description = description;
         this.priority = priority;
         this.notes = notes;
-        this.checklist = checklist;
+        this.status = status;
     }
 
-    setTitle(title) {
-        this.title = title;
+    toggleStatus() {
+        if (this.status === "done") {
+            this.status = "notDone"
+        } else {
+            this.status = "done";
+        }
     }
-
-    getTitle() {
-        return this.title
-    }
-
-    setDate(dueDate) {
-        this.dueDate = dueDate;
-    }
-
-    getDate() {
-        return this.dueDate;
-    }
-
 } 

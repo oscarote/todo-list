@@ -1,4 +1,4 @@
 import './style.css';
-import UI from './ui'
+import loadHomePage from './ui'
 
-document.addEventListener('DOMContentLoaded', UI.loadHomePage)
+document.addEventListener('DOMContentLoaded', loadHomePage)

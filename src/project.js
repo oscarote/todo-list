@@ -1,27 +1,20 @@
+import Task from "./task";
+
 export default class Project {
     constructor(name) {
         this.name = name;
         this.tasks = [];
     }
 
-    setName(name) {
-        this.name = name;
+    addTask(title, dueDate, description, priority, notes) {
+        if (this.tasks.some(task => task.title === title)) return;
+        this.tasks.push(new Task(title, dueDate, description, priority, notes));
     }
 
-    getName() {
-        return this.name;
-    }
-
-    setTasks(tasks) {
-        this.tasks = tasks;
-    }
-
-    getTasks() {
-        return this.tasks;
-    }
-
-    addTask(newTask) {
-        if (this.tasks.find((task) => task.getName() === newTask.name)) return;
-        this.tasks.push(newTask);
+    removeTask(task) {
+        const index = this.tasks.indexOf(task);
+        if (index > -1) {
+            this.tasks.splice(index, 1);
+        }
     }
 }
